@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker Gent - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles for the moving cat container */
+        #movingCatContainer {
+            position: absolute;
+            bottom: 10%; /* Adjust the bottom position as needed */
+            left: 20%; /* Adjust the left position as needed */
+            width: 10vw; /* Adjust the viewport width for relative width */
+            height: 10vh; /* Adjust the viewport height for relative height */
+            overflow: hidden;
+        }
+
+        #movingCatCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+        }
+
+        #movingCatGif {
+            display: none;
+            width: 20%;
+            height: 25%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header" style="background-color: black;">
+        <div class="header-content">
+            <h1>Parker Gent</h1>
+            <p>Cyber Security Analyst / Student / Developer</p>
+        </div>
+        <img src="https://raw.githubusercontent.com/ParkerGent101/portfolio_stuff/main/profile-photo.jpg"
+            alt="Profile Photo" class="profile-photo">
+    </header>
+
+    <div id="movingCatContainer"
+        style="position: absolute; bottom: 544px; left: 85%; width: 400px; height: 300px; overflow: hidden;">
+        <canvas id="movingCatCanvas" width="800" height="300" style="position: absolute; top: 0; left: 85%;"></canvas>
+        <img id="movingCatGif" src="" style="display: none;">
+    </div>
+
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Parker Gent, a student at the University of Arkansas, currently working at Watco. I'm passionate
+                about various aspects of life, with a particular love for pyshical fitness and the companionship of my furry friend
+                Rosie – my loveable dog. When I'm not hitting the books or putting in hours at Watco, you can find me strumming away on my guitar.
+
+                My fascination with computers goes beyond the screen. I enjoy exploring the endless possibilities they
+                offer, whether it's delving into coding projects, staying updated on the latest tech trends, or solving
+                intriguing problems.
+
+                As I navigate through the academic and professional spheres, my goal is to merge my passion for technology
+                with my creative pursuits. Join me on this journey, and let's explore the exciting intersection of
+                technology, creativity, and personal growth together.
+
+                <h2>Navigation</h2>
+                <nav>
+                    <ul>
+                        <i><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Cybersecurity</li>
+                <li>Network Security</li>
+                <li>Python Programming</li>
+                <li>Web Application Development</li>
+                <li>Incident Response</li>
+                <li>CompTIA Networking+ Certified</li>
+                <li>JavaScript Programming</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Python Doom Clone</h3>
+                <p>
+                    This is a python implementation of the classic 1993 game from ID software. 
+                    The game implements raycasting as the focal source for player vision and the ability to 
+                    hit enemies with your shotgun. There is also small AI elements within each NPC that helps them
+                    find the player location even when out of sight. The player has a health bar and can take damage
+                    from each various enemy. There is also the classic Doom theme to make the player feel more 
+                    immeresed while playing the title. The user can hit "esc" keep to exit the program
+                </p>
+                <!-- Add the video element -->
+                <video controls width="100%" height="auto">
+                    <source src="Dm_example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Packet Sniffer</h3>
+                <p>
+                    The code utilizes the Scapy library to sniff packets on a specified 
+                    network interface. The sniffer can capture TCP, UDP, and ICMP packets 
+                    and provides options for the user to choose the type of packets to capture. 
+                    
+                    The script includes logging functionality to record packet details in a log 
+                    file for later analysis. It also maintains statistics such as the total number 
+                    of packets captured and the most frequent source IP addresses. Additionally, the 
+                    script offers a visualization feature using Matplotlib to display a bar chart of 
+                    the packet count for each unique IP address.
+                </p>
+                <!-- Add the video element -->
+                <video controls width="100%" height="auto">
+                    <source src="Dm_example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Ecommerce Website</h3>
+                <p>
+                    This website was created to demonstrate coding skils within HTML and to show
+                    the ability to design and create a working website on my own. There are multiple html
+                    files that work together using JavaScript to complete the functions of the site. 
+                </p>
+                <!-- Add the video element -->
+                <video controls width="100%" height="auto">
+                    <source src="Dm_example.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="section-content">
+            <h2>Contact</h2>
+            <p>
+                You can contact me at parker.gent7@gmail.com or my phone number at 
+                417-658-9935.
+            </p>
+
+            <p>Download my resume: <a href="https://raw.githubusercontent.com/ParkerGent101/portfolio_stuff/main/Resume 1.docx" download>Resume.pdf</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Parker Gent. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var container = document.getElementById('movingCatContainer');
+        var x = 5; // Use a percentage value for initial left position
+        var cycle = 0;
+        var imagePath = 'https://raw.githubusercontent.com/ParkerGent101/portfolio_stuff/main/';
+        var states = ['idle', 'left', 'right'];
+        var currentState = states[Math.floor(Math.random() * states.length)];
+        var moveAmount = 1; // Adjust the value for smoother movement
+        var minX = 50; // Minimum x position
+        var maxX = 80; // Maximum x position
+
+        function update() {
+            var img = document.getElementById('movingCatGif');
+            var folderName;
+            var numFrames;
+
+            switch (currentState) {
+                case 'idle':
+                    folderName = 'idle_imgs';
+                    numFrames = 5;
+                    break;
+                case 'left':
+                    folderName = 'left_imgs';
+                    numFrames = 8;
+                    x -= moveAmount;
+                    break;
+                case 'right':
+                    folderName = 'right_imgs';
+                    numFrames = 8;
+                    x += moveAmount;
+                    break;
+                default:
+                    break;
+            }
+
+            x = Math.max(minX, Math.min(maxX, x));
+
+            img.src = imagePath + folderName + '/frame' + (cycle + 1) + '.gif?t=' + new Date().getTime();
+            img.style.display = 'block';
+
+            container.style.left = x + '%'; // Use percentage for left position
+
+            cycle = gifWork(cycle, numFrames);
+
+            setTimeout(() => {
+                update();
+            }, getRandomDuration());
+        }
+
+        function gifWork(cycle, numFrames) {
+            if (cycle < numFrames - 1) {
+                cycle += 1;
+            } else {
+                cycle = 0;
+                currentState = states[Math.floor(Math.random() * states.length)];
+            }
+            return cycle;
+        }
+
+        function getRandomDuration() {
+            return Math.floor(Math.random() * (300 - 100 + 1) + 100);
+        }
+
+        window.onload = update;
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker Gent - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <h1>Parker Gent</h1>
+            <p>Cyber Security Analyst / Student / Developer</p>
+        </div>
+        <img src="{{ url_for('static', filename='profile-photo.jpg') }}"
+            alt="Profile Photo" class="profile-photo">
+    </header>
+
+    <section id="about" class="section about-section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm Parker Gent, a student at the University of Arkansas, currently working at Watco. I'm passionate
+                about various aspects of life, especially physical fitness and my dog Rosie. When I'm not studying or working,
+                I enjoy playing guitar and exploring technology through coding projects.
+            </p>
+
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Full-Stack Web Application Development</li>
+                <li>Database Management (PostgreSQL)</li>
+                <li>Twilio API Integration</li>
+                <li>Google Cloud Technologies (Cloud Run, VPC Networking, MemoryStore, Cloud SQL)</li>
+                <li>Cybersecurity</li>
+                <li>Network Security</li>
+                <li>Python Programming</li>
+                <li>JavaScript Programming</li>
+                <li>HTML/CSS</li>
+                <li>Incident Response</li>
+                <li>CompTIA Networking+ Certified</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Multi-Factor Authentication Tool</h3>
+                <p>
+                    This project demonstrates my skills in designing and developing a full-stack web application for managing vendor One-Time Passwords (OTPs). The application includes a robust PostgreSQL database to securely store and manage company information, user credentials, and OTP data, ensuring data integrity. Utilizing Twilio’s API, I enabled seamless communication to send and receive OTPs via SMS, enhancing user experience.
+                    I also created an interactive and user-friendly frontend using HTML, CSS, and JavaScript, allowing users to easily add, edit, and manage company information and OTPs. This project helped me gain expertise in Google Cloud technologies, including Cloud Run, VPC Networking, and MemoryStore. In this example I send "Hi" to 479-408-4931. 
+                    For security reasons this is not the application provided to The Consumer Products Group, it is just an example to show functionality.
+                </p>
+                <video controls width="100%" height="auto">
+                    <source src="{{ url_for('static', filename='OTP_man.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>            
+        
+
+            <div class="project-card">
+                <h3>Python Doom Clone</h3>
+                <p>
+                    This is a Python implementation of the classic 1993 game from ID Software. The game uses raycasting for player vision 
+                    and features AI elements that allow NPCs to locate the player. Players have a health bar and can take damage from various enemies. 
+                    The classic Doom theme enhances immersion, and users can press "Esc" to exit the game.
+                </p>
+                <video controls width="100%" height="auto">
+                    <source src="{{ url_for('static', filename='DM_example.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Packet Sniffer</h3>
+                <p>
+                    This code uses the Scapy library to sniff packets on a specified network interface. It captures TCP, UDP, and ICMP packets, 
+                    providing options to filter by packet type. The script logs packet details for later analysis and offers visualization features using Matplotlib.
+                </p>
+                <video controls width="100%" height="auto">
+                    <source src="{{ url_for('static', filename='Pckt_sniff.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="project-card">
+                <h3>Ecommerce Website</h3>
+                <p>
+                    This website showcases my HTML coding skills and demonstrates my ability to design and create a fully functional site 
+                    using multiple HTML files and JavaScript. 
+                </p>
+                <video controls width="100%" height="auto">
+                    <source src="{{ url_for('static', filename='Eccomerce_web.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="section-content">
+            <h2>Contact</h2>
+            <p>
+                You can reach me at <a href="mailto:parker.gent7@gmail.com">parker.gent7@gmail.com</a> or call me at 
+                417-658-9935.
+            </p>
+
+            <p>Download my resume: <a href="https://raw.githubusercontent.com/ParkerGent101/portfolio_stuff/main/Resume_main.docx" download>Resume.pdf</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Parker Gent. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
